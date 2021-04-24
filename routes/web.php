@@ -17,7 +17,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('dashboard','HalamanController@dashboard');
+//============Admin============
+Route::get('loginadmin','LoginController@loginadmin');
+Route::post('loginadminPost', 'LoginController@loginAdminPost');
+Route::get('logoutadmin', 'LoginController@logoutAdmin');
+Route::get('dashboard','AdminController@dashboard');
 Route::get('admin','AdminController@admin');
-Route::get('anggota','PendaftarController@anggota');
+Route::post('addAdmin','AdminController@create');
+Route::put('editAdmin/{id}','AdminController@update');
+
+//===================================
+Route::get('dashboardanggota','AnggotaController@dashboardanggota');
+Route::get('loginanggota','LoginController@loginanggota');
+Route::get('logoutanggota', 'LoginController@logoutAnggota');
+Route::post('loginAnggotaPost', 'LoginController@loginAnggotaPost');
+Route::get('register','LoginController@register');
+Route::post('registerAnggotaPost','LoginController@registerAnggotaPost');
+
+//===================Acara==============
 Route::get('acara','AcaraController@acara');
+Route::post('addAcara','AcaraController@create');
+Route::put('editAcara/{id}','AcaraController@update');
+Route::delete('deleteAcara/{id}','AcaraController@delete');

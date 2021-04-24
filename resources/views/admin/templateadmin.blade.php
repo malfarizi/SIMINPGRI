@@ -15,7 +15,7 @@
   <link href="{{url('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
   <link href="{{url('vendor/select2/dist/css/select2.min.css')}}" rel="stylesheet" type="text/css">
 </head>
-
+ 
 <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
@@ -47,7 +47,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
-          <i class="far fa-fw fa-window-maximize"></i>
+          <i class="far fa-fw fa-user"></i>
           <span>Keanggotaan</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
@@ -59,13 +59,13 @@
       </li>
         <li class="nav-item">
         <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
+          <i class="fas fa-fw fa-images"></i>
           <span>Galeri</span>
         </a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="{{url('acara')}}">
-          <i class="fas fa-fw fa-chart-area"></i>
+          <i class="fas fa-fw fa-calendar"></i>
           <span>Jadwal Acara</span>
         </a>
       </li>
@@ -93,7 +93,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Admin</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">{{session('nama_admin')}}</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
+                  <a href="{{url('logoutadmin')}}" class="btn btn-primary">Logout</a>
                 </div>
               </div>
             </div>
