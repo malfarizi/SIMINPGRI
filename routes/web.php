@@ -41,5 +41,8 @@ Route::put('editAcara/{id}','AcaraController@update');
 Route::delete('deleteAcara/{id}','AcaraController@delete');
 
 //===================Pengajuan==============
+Route::get('pengajuan-admin','PengajuanController@pengajuan_admin');
+Route::get('pengajuan-diterima','PengajuanController@pengajuan_diterima');
 Route::get('pengajuan','PengajuanController@index');
 Route::post('addPengajuan','PengajuanController@create');
+Route::put('editPengajuan/{id}','PengajuanController@update');

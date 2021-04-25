@@ -53,7 +53,8 @@
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Keanggotaan</h6>
-            <a class="collapse-item" href="{{url('anggota')}}">Anggota</a>
+            <a class="collapse-item" href="{{url('pengajuan-admin')}}">Pengajuan Belum Diterima</a>
+            <a class="collapse-item" href="{{url('pengajuan-diterima')}}">Pengajuan Diterima</a>
           </div>
         </div>
       </li>

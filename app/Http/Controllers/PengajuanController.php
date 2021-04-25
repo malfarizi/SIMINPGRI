@@ -17,11 +17,29 @@ class PengajuanController extends Controller
     	// $datas = Pengajuan::all();
     	return view('anggota.pengajuan', compact('datas'));
     }
+    
+    public function pengajuan_admin(){
 
+        $datas = DB::table('pengajuan')
+            ->join('anggota', 'anggota.id_anggota', '=', 'pengajuan.id_anggota')
+            ->where('pengajuan.status', 'Belum Diterima')
+            ->select('anggota.*','pengajuan.*')
+            ->get();
+        // $datas = Pengajuan::all();
+        return view('admin.pengajuan-admin', compact('datas'));
+    }
+
+    public function pengajuan_diterima(){
+
+        $datas = DB::table('pengajuan')
+            ->join('anggota', 'anggota.id_anggota', '=', 'pengajuan.id_anggota')
+            ->select('anggota.*','pengajuan.*')
+            ->where('pengajuan.status', 'Diterima')
+            ->get();
+        // $datas = Pengajuan::all();
+        return view('admin.pengajuan-diterima', compact('datas'));
+    }
     public function create(Request $request){
-
-
-
         $data = new Pengajuan();
         $data->tempat_lahir = $request->tempat_lahir;
         $data->tgl_lahir = $request->tgl_lahir;
@@ -50,5 +68,11 @@ class PengajuanController extends Controller
         $data->foto = $imageName;
         $data->save();
         return redirect()->back()->with('success', 'Data berhasil ditambah');
+    }
+
+    public function update(Request $request, $id){
+         $data = $request->only('status');
+        Pengajuan::whereIdPengajuan($id)->update($data);
+        return redirect()->back()->with('success', 'Data Berhasil Diubah');
     }
 }
