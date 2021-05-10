@@ -43,7 +43,7 @@
                     </div>
                     @endif
 		      		<div class="form-group">
-		      			<input type="text" class="form-control rounded-left" placeholder="username" name="username" required>
+		      			<input type="text" class="form-control rounded-left" placeholder="username" name="username" autocomplete="off" required>
 		      		</div>
 	            <div class="form-group d-flex">
 	              <input type="password" class="form-control rounded-left" placeholder="password" name="password" required>

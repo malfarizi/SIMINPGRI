@@ -1,8 +1,5 @@
-@if (session('admin'))
 @extends('admin.templateadmin')
-@endif
-@extends('anggota.templateanggota')
-@section('title', 'Jadwal Acara')
+
     
 @section('content')
 

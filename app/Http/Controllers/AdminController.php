@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Admin;
+use App\Pengajuan;
 use DB;
 
 class AdminController extends Controller
 {
 	public function dashboard()
     {
-    	return view('admin.dashboard');
+        $blm = Pengajuan::where('status','Belum Diterima')->count();
+        $sdh = Pengajuan::where('status','Diterima')->count();
+    	return view('admin.dashboard',compact('blm','sdh'));
    
     }
         public function admin(){

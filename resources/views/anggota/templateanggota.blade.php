@@ -57,7 +57,7 @@
           </div>
         </div>
        <li class="nav-item">
-        <a class="nav-link" href="{{url('acara')}}">
+        <a class="nav-link" href="{{url('acara-anggota')}}">
           <i class="fas fa-fw fa-calendar"></i>
           <span>Jadwal Acara</span>
         </a>

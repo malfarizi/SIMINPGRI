@@ -36,6 +36,7 @@ Route::post('registerAnggotaPost','LoginController@registerAnggotaPost');
 
 //===================Acara==============
 Route::get('acara','AcaraController@acara');
+Route::get('acara-anggota','AcaraController@acara_anggota');
 Route::post('addAcara','AcaraController@create');
 Route::put('editAcara/{id}','AcaraController@update');
 Route::delete('deleteAcara/{id}','AcaraController@delete');
@@ -46,3 +47,9 @@ Route::get('pengajuan-diterima','PengajuanController@pengajuan_diterima');
 Route::get('pengajuan','PengajuanController@index');
 Route::post('addPengajuan','PengajuanController@create');
 Route::put('editPengajuan/{id}','PengajuanController@update');
+Route::delete('deletePengajuan/{id}','PengajuanController@delete');
+
+Route::get('galeri-admin','GaleriController@galeri_admin');
+Route::post('addGaleri','GaleriController@create');
+Route::put('editGaleri/{id}','GaleriController@update');
+Route::delete('deleteGaleri/{id}','GaleriController@delete');

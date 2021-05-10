@@ -75,4 +75,15 @@ class PengajuanController extends Controller
         Pengajuan::whereIdPengajuan($id)->update($data);
         return redirect()->back()->with('success', 'Data Berhasil Diubah');
     }
+
+     public function delete($id)
+    {
+        $data = Pengajuan::findOrFail($id);
+        try {
+            $data->delete();
+            return redirect()->back()->with('success', 'Data Berhasil Dihapus');
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('error', 'Data Gagal Dihapus');
+        }
+    }
 }

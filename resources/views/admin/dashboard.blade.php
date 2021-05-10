@@ -21,12 +21,12 @@
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Anggota</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Pengajuan Diterima</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sdh}}</div>
                       
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-primary"></i>
+                      <i class="fas fa-user fa-2x text-primary"></i>
                     </div>
                   </div>
                 </div>
@@ -39,12 +39,12 @@
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Calon Anggota</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Pengajuan</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{$blm}}</div>
                       
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-primary"></i>
+                      <i class="far fa-user fa-2x text-primary"></i>
                     </div>
                   </div>
                 </div>

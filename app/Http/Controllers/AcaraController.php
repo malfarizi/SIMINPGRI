@@ -15,6 +15,12 @@ class AcaraController extends Controller
    
     }
 
+    public function acara_anggota()
+    {
+        $datas = Acara::all();
+        return view('anggota.acara-anggota', compact('datas'));
+   
+    }
      public function create(Request $request)
     {
         $request->validate([

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,7 +24,7 @@
         <div class="sidebar-brand-icon">
           <!---<img src="img/logo/logo2.png">-->
         </div>
-        <div class="sidebar-brand-text mx-3">Sistem Informasi Pengurus<span>PGRI</span> Jatibarang</div>
+        <div class="sidebar-brand-text mx-3">SIMINPGRI</div>
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
@@ -52,14 +52,14 @@
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Keanggotaan</h6>
+            <h6 class="collapse-header">Pengajuan</h6>
             <a class="collapse-item" href="{{url('pengajuan-admin')}}">Pengajuan Belum Diterima</a>
             <a class="collapse-item" href="{{url('pengajuan-diterima')}}">Pengajuan Diterima</a>
           </div>
         </div>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{url('galeri-admin')}}">
           <i class="fas fa-fw fa-images"></i>
           <span>Galeri</span>
         </a>
@@ -70,9 +70,6 @@
           <span>Jadwal Acara</span>
         </a>
       </li>
-      
-      
-    
       <hr class="sidebar-divider">
       <div class="version" id="version-ruangadmin"></div>
     </ul>
@@ -85,10 +82,6 @@
             <i class="fa fa-bars"></i>
           </button>
           <ul class="navbar-nav ml-auto">
-           
-       
-            
-            
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -118,20 +111,9 @@
             </li>
           </ul>
         </nav>
-        <!-- Topbar -->
 
-        <!-- Container Fluid-->
+
         @yield('content')
-
-
-
-        
-        
-           
-
-            
-           
-          <!--Row-->
 
           
 
