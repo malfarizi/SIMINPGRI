@@ -38,7 +38,7 @@
         Menu
       </div>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('akun_anggota')}}">
+        <a class="nav-link" href="{{url('profilanggota')}}">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Akun</span>
         </a>

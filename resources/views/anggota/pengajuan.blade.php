@@ -106,7 +106,7 @@
                            placeholder="Masukan kelurahan">
                       </div>
                       <div class="form-group">
-                          <label for="kecamatan">kecamatan</label>
+                          <label for="kecamatan">Kecamatan</label>
                           <input type="text" class="form-control" id="kecamatan" name="kecamatan"
                            placeholder="Masukan kecamatan">
                       </div>
@@ -132,8 +132,11 @@
                       </div>
                       <div class="form-group">
                           <label for="status_pns">Status PNS</label>
-                          <input type="text" class="form-control" id="status_pns" name="status_pns"
-                           placeholder="Masukan status PNS">
+                           <select name="status_pns" class="form-control">
+                             <option>Status PNS</option>
+                             <option value="Aktif">Aktif</option>
+                             <option value="Tidak Aktif">Tidak Aktif</option>
+                           </select>
                       </div>
                       <div class="form-group">
                           <label for="golongan">Golongan</label>
@@ -142,13 +145,21 @@
                       </div>
                       <div class="form-group">
                           <label for="tingkat_sekolah">Tingkat Sekolah</label>
-                          <input type="text" class="form-control" id="tingkat_sekolah" name="tingkat_sekolah"
-                           placeholder="Masukan tingkat sekolah">
+                          <select name="tingkat_sekolah" class="form-control">
+                             <option>Tingkat Sekolah</option>
+                             <option value="SD">SD</option>
+                             <option value="SMP">SMP</option>
+                             <option value="SMA">SMA</option>
+                             <option value="Universitas">Universitas</option>
+                           </select>
                       </div>
                       <div class="form-group">
                           <label for="status_lembaga">Status Lembaga</label>
-                          <input type="text" class="form-control" id="status_lembaga" name="status_lembaga"
-                           placeholder="Masukan status lembaga Negeri/Swasta">
+                          <select name="status_lembaga" class="form-control">
+                             <option>Status Lembaga</option>
+                             <option value="Negeri">Negeri</option>
+                             <option value="Swasta">Swasta</option>
+                           </select>
                       </div>
                       <div class="form-group">
                           <label for="mengajar">Mengajar</label>

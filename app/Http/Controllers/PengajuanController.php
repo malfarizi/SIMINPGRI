@@ -40,6 +40,8 @@ class PengajuanController extends Controller
         return view('admin.pengajuan-diterima', compact('datas'));
     }
     public function create(Request $request){
+
+    
         $data = new Pengajuan();
         $data->tempat_lahir = $request->tempat_lahir;
         $data->tgl_lahir = $request->tgl_lahir;

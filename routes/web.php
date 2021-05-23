@@ -33,6 +33,8 @@ Route::get('logoutanggota', 'LoginController@logoutAnggota');
 Route::post('loginAnggotaPost', 'LoginController@loginAnggotaPost');
 Route::get('register','LoginController@register');
 Route::post('registerAnggotaPost','LoginController@registerAnggotaPost');
+Route::get('profilanggota','AnggotaController@profil');
+Route::put('editAnggota/{id}','AnggotaController@update');
 
 //===================Acara==============
 Route::get('acara','AcaraController@acara');

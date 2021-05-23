@@ -142,6 +142,15 @@
                           <form action="{{url('editPengajuan', $data->id_pengajuan)}}" method="post">
                             @csrf
                             @method('PUT')
+                            <div class="form-group">
+                              <label for="status">Nama : <strong>{{$data->nama_anggota}}</strong></label>
+                            </div>
+                            <div class="form-group">
+                              <label for="status">No KTP : <strong>{{$data->no_ktp}}</strong></label>
+                            </div>
+                            <div class="form-group">
+                              <label for="status">Jenis Kelamin : <strong>{{$data->jk}}</strong></label>
+                            </div>
                              <div class="form-group">
                               <label for="status">Status</label>
                               <select class="select2-single-placeholder form-control" 

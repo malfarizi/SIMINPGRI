@@ -125,7 +125,7 @@ class LoginController extends Controller
 
         ];
         $create = Anggota::create($data);
-        return redirect()->back()->with('success','Data Berhasil Ditambah');
+        return view('loginanggota')->with('success','Data Berhasil Ditambah');
     }
      public function logoutAnggota(){
         session()->forget('anggota');
