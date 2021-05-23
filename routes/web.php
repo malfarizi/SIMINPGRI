@@ -55,3 +55,11 @@ Route::get('galeri-admin','GaleriController@galeri_admin');
 Route::post('addGaleri','GaleriController@create');
 Route::put('editGaleri/{id}','GaleriController@update');
 Route::delete('deleteGaleri/{id}','GaleriController@delete');
+
+Route::get('index','DashboardController@index');
+Route::get('arti','DashboardController@arti');
+Route::get('kepengurusan','DashboardController@kepengurusan');
+Route::get('kontak','DashboardController@kontak');
+Route::get('sejarah','DashboardController@sejarah');
+Route::get('sumpah','DashboardController@sumpah');
+Route::get('tentang','DashboardController@tentang');
