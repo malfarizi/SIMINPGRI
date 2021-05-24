@@ -80,7 +80,7 @@ class LoginController extends Controller
         //}else{
             if($auth->attempt($credentials)){
                 $anggota = Anggota::where('username', $request->username)->first();
-                session()->put('pegawai', $anggota->username);
+                session()->put('username', $anggota->username);
                 session()->put('id_anggota', $anggota->id_anggota);
                 session()->put('nama_anggota', $anggota->nama_anggota);
                 return redirect('dashboardanggota')->with('success', 'Selamat Datang');
@@ -102,7 +102,7 @@ class LoginController extends Controller
     public function registerAnggotaPost(Request $request)
     {
         $request->validate([
-            'username'      => 'required|unique:pegawai|min:3|string|max:100', 
+            'username'      => 'required|unique:anggota|min:3|string|max:100', 
             'password'      => 'required|string|min:5',
             'nama_anggota'  => 'required|string',
             'jk'            => 'required'
